@@ -12,6 +12,6 @@ xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/\V<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?\V<C-R>=@/<CR><CR>
 
 " recursively vimgrep for word under cursor or selection if you hit leader-star
-nmap <leader>* :execute 'CtrlSF -L ' . substitute(escape(expand("<cword>"), '\'), '\n', '\\n', 'g')<CR>
-vmap <leader>* :<C-u>call <SID>VSetSearch('')<CR>:execute 'CtrlSF -L ' . @/<CR>
+nmap <silent> <leader>* :execute 'CtrlSF -L ' . substitute(escape(expand("<cword>"), '\'), '\n', '\\n', 'g')<CR>
+vmap <silent> <leader>* :<C-u>call <SID>VSetSearch('')<CR>:execute 'CtrlSF -L ' . @/<CR>
 
